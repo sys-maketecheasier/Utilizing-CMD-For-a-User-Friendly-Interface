@@ -1,5 +1,5 @@
 # Utilizing-CMD-For-a-User-Friendly-Interface
-Here at MakeTechEasier, we are determinged to make complicated things, some that require lots of experience, into something simple.
+Here at MakeTechEasier, we are determined to make complicated things, some that require lots of experience, into something simple.
 ## Batch Files
 Batch files use the .bat file extension and run commands on Command Prompt. The purpose of this repository is to make .bat files
 that perform complicated commands, and turn them into something simple that anybody can understand.
