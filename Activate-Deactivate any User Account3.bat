@@ -31,6 +31,8 @@ Cls
 echo Activate/Deactivate any User Account
 echo Enter the Username of the account you would like to Activate/Deactivate
 set /p n=Username: 
+echo Enter the Password of the account that you are trying to Activate/Deactivate
+set /p n=Password:  
 echo To Activate, type Y, and to Deactivate, type N
 set/p "cho=>"
 if %cho%==Y net user %n% /active:yes
