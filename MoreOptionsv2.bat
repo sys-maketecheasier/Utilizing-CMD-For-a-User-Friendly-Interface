@@ -35,7 +35,7 @@ ECHO 4.Activate/Deactivate the Built-In Administrator Account
 ECHO 5.Exit
 ECHO.
 
-CHOICE /C 12345 /M "Enter your choice:"
+CHOICE /C 12345 "Enter your choice:"
 
 :: Note - list ERRORLEVELS in decreasing order
 IF ERRORLEVEL 5 GOTO Exit
@@ -50,7 +50,7 @@ IF ERRORLEVEL 1 GOTO Operation1
 Cls
 echo Create a new User Account
 set /p n=Username of New Account: 
-set /p np= Password for New Account
+set /p np= Password for New Account: 
 net user %n% %np% /ADD
 GOTO ORIGIN
 
