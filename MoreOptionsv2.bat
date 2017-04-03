@@ -63,7 +63,15 @@ net user %j% %l% /CHANGE
 GOTO ORIGIN
 
 :Operation3
-ECHO Close All Windows (put your close all windows code here)
+ECHO Activate/Deactivate a User Account
+set /p m=Username of the Account: 
+set /p n=Current Password of the Account: 
+echo Type Y to activate, and Type N to Deactivate
+set/p "cho=>"
+if %cho%==Y net user %m% /active:yes
+if %cho%==y net user %m% /active:yes
+if %cho%==n net user %m% /active:no
+if %cho%==N net user %m% /active:no
 GOTO ORIGIN
 
 :Operation4
