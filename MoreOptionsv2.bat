@@ -51,7 +51,7 @@ Cls
 echo Create a new User Account
 set /p n=Username of New Account: 
 set /p np= Password for New Account
-ECHO Create a New User Account (net user %n% %np% /ADD )
+net user %n% %np% /ADD
 GOTO ORIGIN
 
 :Operation2
