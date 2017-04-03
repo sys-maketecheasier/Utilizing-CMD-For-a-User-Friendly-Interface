@@ -18,12 +18,10 @@ IF ERRORLEVEL 2 GOTO Operation2
 IF ERRORLEVEL 1 GOTO Operation1
 
 :Operation1
-ECHO Create a New User Account
+ECHO Create a New User Account (net user %a% %b% /ADD)
 set /a=Username
 set /b=Password
-net user %a% %b% /ADD
 GOTO ORIGIN
-
 :Operation2
 ECHO Shutdown (put your shutdown code here)
 GOTO ORIGIN
