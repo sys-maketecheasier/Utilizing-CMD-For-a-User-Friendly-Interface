@@ -28,11 +28,11 @@ if '%errorlevel%' NEQ '0' (
 @ECHO OFF
 CLS
 :ORIGIN
-ECHO 1.Create a New User Account
-ECHO 2.Change the Password of an Existing User Account
-ECHO 3.Activate/Deactivate a User Account
-ECHO 4.Activate/Deactivate the Built-In Administrator Account
-ECHO 5.Exit
+ECHO 1. Create a New User Account
+ECHO 2.  Change the Password of an Existing User Account
+ECHO 3. Activate/Deactivate a User Account
+ECHO 4. Activate/Deactivate the Built-In Administrator Account
+ECHO 5. Exit
 ECHO.
 
 CHOICE /C 12345 /M "Enter your choice: "
