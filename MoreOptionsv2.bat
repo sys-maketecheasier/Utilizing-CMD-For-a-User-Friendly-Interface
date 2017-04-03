@@ -18,9 +18,9 @@ IF ERRORLEVEL 2 GOTO Operation2
 IF ERRORLEVEL 1 GOTO Operation1
 
 :Operation1
+set /a=Username: 
+set /b=Password: 
 ECHO Create a New User Account (net user %a% %b% /ADD)
-set /a=Username
-set /b=Password
 GOTO ORIGIN
 
 :Operation2
