@@ -29,7 +29,7 @@ if '%errorlevel%' NEQ '0' (
 CLS
 :ORIGIN
 ECHO 1. Create a New User Account
-ECHO 2.  Change the Password of an Existing User Account
+ECHO 2. Change the Password of an Existing User Account
 ECHO 3. Activate/Deactivate a User Account
 ECHO 4. Activate/Deactivate the Built-In Administrator Account
 ECHO 5. Exit
@@ -46,23 +46,28 @@ IF ERRORLEVEL 1 GOTO Operation1
 
 :Operation1
 @echo off
-:A
 Cls
 echo Create a new User Account
 set /p n=Username of New Account: 
 set /p np= Password for New Account: 
 net user %n% %np% /ADD
+Pause
 GOTO ORIGIN
 
 :Operation2
+@echo off
+Cls
 ECHO Change the Password of an Existing User Account
 set /p j=Username of the Account: 
 set /p k=Current Password of the Account:
 set /p l=New Password for the Account: 
 net user %j% %l% /CHANGE
+Pause
 GOTO ORIGIN
 
 :Operation3
+@echo off
+Cls
 ECHO Activate/Deactivate a User Account
 set /p m=Username of the Account: 
 set /p n=Current Password of the Account: 
@@ -72,9 +77,12 @@ if %cho%==Y net user %m% /active:yes
 if %cho%==y net user %m% /active:yes
 if %cho%==n net user %m% /active:no
 if %cho%==N net user %m% /active:no
+Pause
 GOTO ORIGIN
 
 :Operation4
+@echo off
+Cls
 ECHO Activate/Deactivate the Built-In Administrator Account
 echo Type Y to activate the Built-In Administrator Account, and Type N to Deactivate the Built-In Administrator Account
 set/p "cho=>"
@@ -82,7 +90,12 @@ if %cho%==Y net user Administrator /active:yes
 if %cho%==y net user Administrator /active:yes
 if %cho%==n net user Administrator /active:no
 if %cho%==N net user Administrator /active:no
+Pause
 GOTO ORIGIN
 
 :Exit
+@echo off
+Cls
 ECHO Exit the Program
+Pause
+Exit
