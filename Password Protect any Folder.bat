@@ -1,5 +1,5 @@
-cls
-@ECHO OFF
+@echo off
+Cls
 title Folder Locker
 if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
 if NOT EXIST Locker goto MDLOCKER
