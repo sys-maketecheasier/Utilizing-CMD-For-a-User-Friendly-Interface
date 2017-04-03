@@ -35,7 +35,7 @@ ECHO 4.Activate/Deactivate the Built-In Administrator Account
 ECHO 5.Exit
 ECHO.
 
-CHOICE /C 12345 "Enter your choice:"
+CHOICE /C 12345 /M "Enter your choice:"
 
 :: Note - list ERRORLEVELS in decreasing order
 IF ERRORLEVEL 5 GOTO Exit
@@ -55,7 +55,11 @@ net user %n% %np% /ADD
 GOTO ORIGIN
 
 :Operation2
-ECHO Shutdown (put your shutdown code here)
+ECHO Change the Password of an Existing User Account
+set /p j=Username of the Account: 
+set /p k=Current Password of the Account:
+set /p l=New Password for the Account: 
+net user %j% %l% /CHANGE
 GOTO ORIGIN
 
 :Operation3
