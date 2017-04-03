@@ -32,13 +32,15 @@ ECHO 1. Create a New User Account
 ECHO 2. Change the Password of an Existing User Account
 ECHO 3. Activate/Deactivate a User Account
 ECHO 4. Activate/Deactivate the Built-In Administrator Account
-ECHO 5. Exit
+ECHO 5. Create a Password-Protected Folder
+ECHO 6. Exit
 ECHO.
 
-CHOICE /C 12345 /M "Enter your choice: "
+CHOICE /C 123456 /M "Enter your choice: "
 
 :: Note - list ERRORLEVELS in decreasing order
-IF ERRORLEVEL 5 GOTO Exit
+IF ERRORLEVEL 6 GOTO Exit
+IF ERRORLEVEL 5 GOTO Operation5
 IF ERRORLEVEL 4 GOTO Operation4
 IF ERRORLEVEL 3 GOTO Operation3
 IF ERRORLEVEL 2 GOTO Operation2
@@ -92,6 +94,43 @@ if %cho%==n net user Administrator /active:no
 if %cho%==N net user Administrator /active:no
 Pause
 GOTO ORIGIN
+
+:Operation5
+@echo off
+Cls
+title Password Protected Folder
+echo This will create a Password-Protected Folder that you can use to protect your documents.
+echo The default folder Password is: password. To edit the password, please go to the Readme.md file at github.com/maketecheasier/Utilizing-CMD-For-a-More-User-Friendly-Interface
+if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
+if NOT EXIST Locker goto MDLOCKER
+:CONFIRM
+echo Are you sure u want to Lock the folder(Y/N)
+set/p "cho=>"
+if %cho%==Y goto LOCK
+if %cho%==y goto LOCK
+if %cho%==n goto END
+if %cho%==N goto END
+echo Invalid choice.
+goto CONFIRM
+:LOCK
+ren Locker "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+attrib +h +s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+echo Folder locked
+goto End
+:UNLOCK
+echo Enter password to Unlock folder
+set/p "pass=>"
+if NOT %pass%==password goto FAIL
+attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" Locker
+echo Folder Unlocked successfully
+goto End
+:FAIL
+echo Invalid password
+goto end
+:MDLOCKER
+md Locker
+echo Locker created successfully
 
 :Exit
 @echo off
