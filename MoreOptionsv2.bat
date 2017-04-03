@@ -75,9 +75,14 @@ if %cho%==N net user %m% /active:no
 GOTO ORIGIN
 
 :Operation4
-ECHO Logoff (put your log off code here)
+ECHO Activate/Deactivate the Built-In Administrator Account
+echo Type Y to activate the Built-In Administrator Account, and Type N to Deactivate the Built-In Administrator Account
+set/p "cho=>"
+if %cho%==Y net user Administrator /active:yes
+if %cho%==y net user Administrator /active:yes
+if %cho%==n net user Administrator /active:no
+if %cho%==N net user Administrator /active:no
 GOTO ORIGIN
 
 :Exit
-ECHO Switch User (put your switch user code here)
-GOTO ORIGIN
+ECHO Exit the Program
