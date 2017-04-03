@@ -22,6 +22,7 @@ ECHO Create a New User Account (net user %a% %b% /ADD)
 set /a=Username
 set /b=Password
 GOTO ORIGIN
+
 :Operation2
 ECHO Shutdown (put your shutdown code here)
 GOTO ORIGIN
