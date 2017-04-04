@@ -3,6 +3,8 @@ Here at MakeTechEasier, we are determined to make complicated things, some that 
 # Instructions for Complicated Batch Files
 1. Save2Txt.bat
     Save2Txt.bat is a Batch file that creates a text document, then adds the text that you type in on the prompt. To make this command perform more complicated actions, or always have a default beginning, contact me at web.mte@outlook.com for more help.
+2. Password Protect Any Folder.bat
+    Password Protect Any Folder.bat is a Batch file that creates a folder, allows you to add files to it, and the lock it again. To change the password, right-click on the .bat file, select edit, and look for "Your Password Here" in the text file. Change that to your desired password, click file (top left-hand corner), click save, and exit. You have now added your own personal password! For more help, contact me at web.mte@outlook.com.
 ## Batch Files
 Batch files use the .bat file extension and run commands on Command Prompt. The purpose of this repository is to make .bat files
 that perform complicated commands, and turn them into something simple that anybody can understand.
