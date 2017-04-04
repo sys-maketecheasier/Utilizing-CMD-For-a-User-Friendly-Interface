@@ -10,6 +10,6 @@ set /p t2a1=Line 1:
 set /p t2a2=Line 2: 
 set /p t2a3=Line 3: 
 echo %t2a% >> C:\Users\joelt\Desktop\Save2Txt.txt
-echo The command has completed. The following text has been added to the text file: %t2a1%, %t2a2%, %t2a3%
+echo The command has completed. The following text has been added to the text file: %t2a1%, %t2a2%, and, %t2a3%
 Pause
 Goto Beginning
