@@ -1,3 +1,4 @@
+:Beginning
 @echo off
 Cls
 title Save Text to a Text Document
@@ -10,3 +11,4 @@ set /p t2a=Text to Add:
 echo %t2a% >> C:\Users\joelt\Desktop\Save2Txt.txt
 echo The command has completed. The following text: "%t2a%" has been added to the text file.
 Pause
+Goto Beginning
