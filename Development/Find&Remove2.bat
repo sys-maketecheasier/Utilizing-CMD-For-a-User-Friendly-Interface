@@ -1,6 +1,6 @@
 @echo off &setlocal
-set "myfile=%~1"
-(for /f "delims=" %%i in ('findstr /n "^" "%C:\Users\joelt\Desktop\file2.txt%"') do (
+set "myfile=C:\Users\joelt\Desktop\Test2.txt"
+(for /f "delims=" %%i in ('findstr /n "^" "%myfile%"') do (
     set "line=%%i"
     for /f "delims=:" %%a in ("%%i") do set "row=%%a"
     setlocal enabledelayedexpansion
