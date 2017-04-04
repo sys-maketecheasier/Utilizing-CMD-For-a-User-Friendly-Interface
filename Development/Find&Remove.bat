@@ -1,3 +1,4 @@
+ERROR: NON-FUNCTIONAL
 @echo off
 setlocal EnableDelayedExpansion
 
