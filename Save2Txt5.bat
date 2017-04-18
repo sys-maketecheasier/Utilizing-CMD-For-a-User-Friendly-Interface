@@ -1,3 +1,5 @@
+@echo all
+:Cls
 :BGG
 title Save 2 Text
 echo Welcome to Save2Txt Version 5.6.7.0141
