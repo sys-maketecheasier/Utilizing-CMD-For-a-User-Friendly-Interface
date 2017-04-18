@@ -1,3 +1,5 @@
+@ECHO off
+Cls
 :running
 %run%
 set ran=%run%
