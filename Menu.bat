@@ -1,0 +1,20 @@
+@ECHO OFF
+CLS
+:ORIGIN
+ECHO 1. 
+ECHO 2. 
+ECHO 3. 
+ECHO 4. 
+ECHO 5. 
+ECHO 6. 
+ECHO.
+
+CHOICE /C 123456 /M "Enter your choice: "
+
+:: Note - list ERRORLEVELS in decreasing order
+IF ERRORLEVEL 6 GOTO Operation6
+IF ERRORLEVEL 5 GOTO Operation5
+IF ERRORLEVEL 4 GOTO Operation4
+IF ERRORLEVEL 3 GOTO Operation3
+IF ERRORLEVEL 2 GOTO Operation2
+IF ERRORLEVEL 1 GOTO Operation1

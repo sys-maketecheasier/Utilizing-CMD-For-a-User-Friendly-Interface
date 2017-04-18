@@ -1,4 +1,5 @@
 @echo off
+Cls
 @mode con cols=55 lines=10
 title Talk
 color A
