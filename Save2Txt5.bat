@@ -1,6 +1,6 @@
 :BGG
-@ECHO all
-Cls
+@ECHO OFF
+CLS
 title Save 2 Text
 echo Welcome to Save2Txt Version 5.6.7.0141
 echo Please follow the instructions below to add text to your text file.
