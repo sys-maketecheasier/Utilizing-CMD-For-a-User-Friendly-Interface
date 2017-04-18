@@ -1,3 +1,4 @@
+:BGG
 title Save 2 Text
 echo Welcome to Save2Txt Version 5.6.7.0141
 echo Please follow the instructions below to add text to your text file.
@@ -16,4 +17,4 @@ set /p t2a=Text to Add:
 Pause
 echo %t2a% >> %sl%\%fn%
 Pause
-Exit
+Goto BGG
