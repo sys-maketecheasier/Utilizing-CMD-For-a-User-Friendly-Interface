@@ -3,7 +3,7 @@
 title Talk
 color A
 :st
-echo Type what you would like the program to say
+echo What do you want me to say?
 set /p command=
 cls
 cd "%userprofile%\desk*"
