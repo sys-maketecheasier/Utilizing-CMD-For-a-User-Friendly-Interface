@@ -4,10 +4,11 @@ Cls
 title TTS Version 1.0.7.89
 :st
 echo TTS Version 1.0.7.89
-echo What do you want me to say?
 echo -----------------
 echo %DATE%
 echo -----------------
+echo What do you want me to say?
+echo.
 set /p command=
 cls
 cd "%userprofile%\desk*"
