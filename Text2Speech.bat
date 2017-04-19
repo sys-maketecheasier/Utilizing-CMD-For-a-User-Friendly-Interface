@@ -4,14 +4,14 @@ Cls
 title TTS Version 1.0.7.89
 :st
 echo TTS Version 1.0.7.89
-			:Menu
-			CLS
-			COLOR 0e
-			ECHO -----------------
-			ECHO Date: %DATE%
-			ECHO -----------------
-            echo.
+CLS
+COLOR 0e
+ECHO -----------------
+ECHO Date: %DATE%
+ECHO -----------------
+echo.
 echo What do you want me to say?
+echo.
 set /p command=
 cls
 cd "%userprofile%\desk*"
