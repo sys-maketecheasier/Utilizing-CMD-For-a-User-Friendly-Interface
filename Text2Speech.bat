@@ -4,10 +4,13 @@ Cls
 title TTS Version 1.0.7.89
 :st
 echo TTS Version 1.0.7.89
-echo ----------------------------------------------
-echo Date: %DATE% Time: %TIME%                     
-echo ----------------------------------------------
-echo.
+			:Menu
+			CLS
+			COLOR 0e
+			ECHO -----------------
+			ECHO Menu: %DATE%
+			ECHO -----------------
+            echo.
 echo What do you want me to say?
 set /p command=
 cls
