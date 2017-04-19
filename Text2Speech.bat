@@ -8,7 +8,7 @@ echo TTS Version 1.0.7.89
 			CLS
 			COLOR 0e
 			ECHO -----------------
-			ECHO Menu: %DATE%
+			ECHO Date: %DATE%
 			ECHO -----------------
             echo.
 echo What do you want me to say?
