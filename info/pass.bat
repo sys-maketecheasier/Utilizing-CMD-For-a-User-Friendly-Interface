@@ -1,4 +1,4 @@
 :: 
-SET name=Joel Bond 
-SET pass=P@66w0rd
+SET name=Joel 
+SET pass=pass
 SET tries=3 
