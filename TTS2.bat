@@ -1,13 +1,14 @@
 @echo off
 @mode con cols=55 lines=10
 title Talk
-color A
+color 9a
 :st
 echo --------------------
 echo Date: %DATE%
 echo --------------------
 echo.
-echo Type what you would like the program to say
+echo It is currently %TIME%
+echo What would you like your computer to say?
 echo.
 set /p command=
 cls
