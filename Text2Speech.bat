@@ -5,7 +5,7 @@ title TTS Version 1.0.7.89
 :st
 echo TTS Version 1.0.7.89
 echo -----------------
-echo %DATE%
+echo %DATE%-%TIME%
 echo -----------------
 echo What do you want me to say?
 echo.
