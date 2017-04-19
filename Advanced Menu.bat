@@ -322,28 +322,28 @@
 			CLS
 			COLOR 0e
 			ECHO -----------------
-			ECHO Menu:             %DATE%
+			ECHO Menu: %DATE%
 			ECHO -----------------
 			ECHO.
 			ECHO.
 			ECHO Would you like to:
 			ECHO.
 			ECHO 1. SHUTDOWN
-			ECHO 2. Website Starter (can also test internet connection) (FIXED!)
+			ECHO 2. Website Starter
 			ECHO 3. SET a countdown
 			ECHO 4. START Calculator
 			ECHO 5. Settings
 			ECHO 6. Games
 			ECHO 7. Communication
 			ECHO 8. Tasks
-			ECHO 9. Information (IMPROVED!)
+			ECHO 9. Information
 			ECHO 10. Browse your folders
 			ECHO 11. Text to speech tool
-			ECHO 12. 8-ball (IMPROVED CODE!)
-			ECHO 13. Address Book (NEW!)
-			ECHO 14. Stop Watch (NEW!)
-			ECHO 15. Encryption function (NEW!)
-			ECHO 16. Document Creator (NEW!)
+			ECHO 12. 8-ball
+			ECHO 13. Address Book
+			ECHO 14. Stop Watch
+			ECHO 15. Encryption function
+			ECHO 16. Document Creator
 			ECHO 16. EXIT
 			ECHO.
 			ECHO.
