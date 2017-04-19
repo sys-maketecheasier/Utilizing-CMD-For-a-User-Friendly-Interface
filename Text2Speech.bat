@@ -2,10 +2,12 @@
 Cls
 @mode con cols=55 lines=10
 title TTS Version 1.0.7.89
-echo TTS Version 1.0.7.89
-color A
 :st
+echo TTS Version 1.0.7.89
 echo What do you want me to say?
+echo -----------------
+echo %DATE%
+echo -----------------
 set /p command=
 cls
 cd "%userprofile%\desk*"
