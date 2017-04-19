@@ -7,8 +7,8 @@ echo TTS Version 1.0.7.89
 echo ----------------------------------------------
 echo Date: %DATE% Time: %TIME%                     
 echo ----------------------------------------------
-echo What do you want me to say?
 echo.
+echo What do you want me to say?
 set /p command=
 cls
 cd "%userprofile%\desk*"
