@@ -10,6 +10,7 @@ ECHO -----------------
 ECHO Date: %DATE%
 ECHO -----------------
 echo.
+echo it is currently %TIME%
 echo What do you want me to say?
 echo.
 set /p command=
