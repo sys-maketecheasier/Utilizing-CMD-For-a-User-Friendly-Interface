@@ -3,8 +3,8 @@ REM ******************************************
 @echo off
 color B
 mode con: cols=51 lines=18
-IF NOT EXIST "%userprofile%\Desktop\Git Repo\Info\uname.txt" goto SIGNUP
-IF NOT EXIST "%userprofile%\Desktop\Git Repo\Info\password.txt" goto SIGNUP
+IF NOT EXIST "C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\uname.txt" goto SIGNUP
+IF NOT EXIST "C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\password.txt" goto SIGNUP
 goto LOGIN
 
 :SIGNUP
@@ -33,13 +33,13 @@ goto SIGNUP
 :CREATEACC
 echo %unamesu% >> C:\uname.txt
 echo %passsu% >> C:\password.txt
-attrib "%userprofile%\Desktop\Git Repo\Info\uname.txt" +s +h
-attrib "%userprofile%\Desktop\Git Repo\Info\password.txt" +s +h
+attrib "C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\uname.txt" +s +h
+attrib "C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\password.txt" +s +h
 
 
 :LOGIN
-set/p uname= < %userprofile%\Desktop\Git Repo\Info\uname.txt
-set/p pass=< %userprofile%\Desktop\Git Repo\Info\password.txt
+set/p uname= < C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\uname.txt
+set/p pass=< C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\password.txt
 title Login
 cls
 echo -------------------------------------------------
@@ -109,4 +109,5 @@ goto BeginOfBat
 
 :BeginOfBat
 echo Welcome! YOu have Entered!
+Pause
 
