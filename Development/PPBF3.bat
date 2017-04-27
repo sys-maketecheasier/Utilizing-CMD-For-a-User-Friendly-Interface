@@ -31,8 +31,8 @@ pause
 goto SIGNUP
 
 :CREATEACC
-echo %unamesu% >> C:\uname.txt
-echo %passsu% >> C:\password.txt
+echo %unamesu% >> C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\uname.txt
+echo %passsu% >> C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\password.txt
 attrib "C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\uname.txt" +s +h
 attrib "C:\Users\BondJo\Documents\GitHub\Utilizing-CMD-For-a-User-Friendly-Interface\Utilizing-CMD-For-a-User-Friendly-Interface\info\password.txt" +s +h
 
