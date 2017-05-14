@@ -1,11 +1,13 @@
-@echo off
-@mode con cols=55 lines=10
-title Talk
-color 9a
+﻿@mode con cols=55 lines=10
+title TTS Version 1.2.6.54
 :st
-echo --------------------
+@echo off
+Cls
+echo ----------------------
+echo TTS Version 1.2.6.54
+echo ----------------------
 echo Date: %DATE%
-echo --------------------
+echo ----------------------
 echo.
 echo It is currently %TIME%
 echo What would you like your computer to say?
