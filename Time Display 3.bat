@@ -5,11 +5,7 @@ accepted
 
     call :get12h hour
     echo %hour%
-
-    echo This is a test > myfile_%hour%.txt
-
-    exit /b
-
+    
 :get12h outputVar
     setlocal enableextensions
     for /f "tokens=1 delims=: " %%a in ("%time: =0%") do set /a "h=1%%a-100"
