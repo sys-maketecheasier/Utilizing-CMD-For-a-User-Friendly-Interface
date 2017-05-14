@@ -5,7 +5,7 @@ accepted
 
     call :get12h hour
     echo %hour%
-    
+
 :get12h outputVar
     setlocal enableextensions
     for /f "tokens=1 delims=: " %%a in ("%time: =0%") do set /a "h=1%%a-100"
@@ -15,6 +15,8 @@ accepted
         set "td=am" & if %h% equ 0 set "h=12"
     )
     endlocal & set "%~1=%h%%td%" & exit /b
+
+    Pause
 
 @echo off
 @mode con cols=55 lines=10
