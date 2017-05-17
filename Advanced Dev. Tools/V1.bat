@@ -124,12 +124,14 @@ echo 4. Change the Password of any Existing User Account
 echo.
 CHOICE /C 1234 /M "Enter your choice: "
 
-IF ERRORLEVEL 4 GoTo NUA
-IF ERRORLEVEL 3 GoTo DAUA
-IF ERRORLEVEL 2 GoTo BIAA
-IF ERRORLEVEL 1 GoTo EUA
+IF ERRORLEVEL 4 GoTo EUA
+IF ERRORLEVEL 3 GoTo BIIA
+IF ERRORLEVEL 2 GoTo DAUA
+IF ERRORLEVEL 1 GoTo NUA
 
 :NUA
+@echo all
+CLS
 echo Here is a list of the current user accounts on your computer. To add a new user account, press Enter.
 net user
 PAUSE >NUL
@@ -149,10 +151,56 @@ PAUSE >NUL
 goto AUA
 
 :DAUA
+@echo all
+CLS
+echo Here is a list of the current user accounts on your omputer. To enable - disable a user account, press enter
+echo.
+net user
+echo.
+echo Enter the Username of the Account you would like to enable/disable.
+set /p UOA=
+echo Press any key to continue
+PAUSE >NUL=
+echo To disable this account, type y. To enable this account, type n.
+set /p "cho=>"
+if %cho%==Y goto BTEP
+if %cho%==y goto BTEP
+if %cho%==N goto BTDP
+if %cho%==n goto BTDP
 
+:BTEP
+echo To begin the process, press any key
+PAUSE >NUL
+net user %UOA% /active:no
+echo Press any key to return to the Main Menu
+PAUSE >NUL
+goto ORIGIN
+
+:BTDP
+echo To begin the process, press any key
+PAUSE >NUL
+net user %UOA% /active:no
+echo Press any key to return to the Main Menu
+PAUSE >NUL
+goto Origin
 :BIAA
 
 :EUA
+echo This command will change the password of any existing user account. Press any key to continue.
+PAUSE >NUL
+echo Please enter the username of the account:
+set /p AA=
+echo Press any key
+echo.
+echo Please enter the new password for the account
+set /p AP
+echo Press any key to continue
+PAUSE >NUL
+net user %AA% %AP% /change
+echo Press any key to return to the main menu
+PAUSE >NUA
+goto ORIGIN
+
 
 :LOCK
 echo Press any key to exit.
