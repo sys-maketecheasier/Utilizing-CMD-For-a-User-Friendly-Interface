@@ -1,11 +1,20 @@
+::REM
+::There are 3 features that are already thought of. These include:
+::Save Text to a Text File
+::Adjust User Accounts and Admin Settings
+::And Text to Speech
+::Code for these 3 things is already created, and the code for #2 can be manually created
+::Make Sure to have a Menu inside the Menu, to make it more professional and include more features without cluttering
+::the interface.
+
 @ECHO OFF
 CLS
 :ORIGIN
 @echo OFF
 Cls
-ECHO 1. Save Text to a Text File
-ECHO 2. Adjust User Accounts and Admin Settings
-ECHO 3. Text To Speech
+ECHO 1. COMING SOON
+ECHO 2. COMING SOON
+ECHO 3. COMING SOON
 ECHO 4. COMING SOON
 ECHO 5. COMING SOON
 ECHO 6. Exit
@@ -31,6 +40,7 @@ if %cho%==Yes goto LOCK
 if %cho%==yes goto LOCK
 if %cho%==no goto ORIGIN
 if %cho%==No goto ORIGIN
+
 :Operation5
 @echo all
 CLS
@@ -44,3 +54,25 @@ CLS
 echo This feature is coming soon. Press any key to go back to the main menu.
 PAUSE >NUL
 goto ORIGIN
+
+:Operation3
+@echo all
+CLS
+echo This feature is coming soon. Press any key to go back to the main menu.
+PAUSE >NUL
+goto ORIGIN
+
+:Operation2
+@echo all
+CLS
+echo This feature is coming soon. Press any key to go back to the main menu.
+PAUSE >NUL
+goto ORIGIN
+
+:Operation1
+@echo all
+CLS
+echo This feature is coming soon. Press any key to go back to the main menu.
+PAUSE >NUL
+goto ORIGIN
+
