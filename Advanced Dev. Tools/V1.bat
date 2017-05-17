@@ -12,7 +12,7 @@ CLS
 :ORIGIN
 @echo OFF
 Cls
-ECHO 1. COMING SOON
+ECHO 1. Adjust User Accounts and Admin Settings
 ECHO 2. COMING SOON
 ECHO 3. COMING SOON
 ECHO 4. COMING SOON
@@ -22,7 +22,6 @@ ECHO.
 
 CHOICE /C 123456 /M "Enter your choice: "
 
-:: Note - list ERRORLEVELS in decreasing order
 IF ERRORLEVEL 6 GOTO Operation6
 IF ERRORLEVEL 5 GOTO Operation5
 IF ERRORLEVEL 4 GOTO Operation4
@@ -34,12 +33,12 @@ IF ERRORLEVEL 1 GOTO Operation1
 @echo all
 Cls
 echo Are you sure you would like to exit the program?
-echo Type Yes to exit, or type No to return to the main menu.
+echo Type Y to exit, or type N to return to the main menu.
 set/p "cho=>"
-if %cho%==Yes goto LOCK
-if %cho%==yes goto LOCK
-if %cho%==no goto ORIGIN
-if %cho%==No goto ORIGIN
+if %cho%==Y goto LOCK
+if %cho%==y goto LOCK
+if %cho%==n goto ORIGIN
+if %cho%==N goto ORIGIN
 
 :Operation5
 @echo all
@@ -72,7 +71,73 @@ goto ORIGIN
 :Operation1
 @echo all
 CLS
-echo This feature is coming soon. Press any key to go back to the main menu.
-PAUSE >NUL
-goto ORIGIN
+echo ------------------------------------------
+echo Adjust User Accounts and Admin Settings
+echo ------------------------------------------
 
+echo 1. Adjust User Accounts
+echo 2. Edit Administrator Settings
+echo 3. Return to Main Meni
+echo 4. Exit
+
+CHOICE /C 12 /M "Enter your choice: "
+
+IF ERRORLEVEL 4 Goto LOCK
+IF ERRORLEVEL 4 GOTO ORIGIN
+IF ERRORLEVEL 2 Goto EAS
+IF ERRORLEVEL 1 Goto AUA
+
+:AUA
+@echo all
+Cls
+echo ---------------------------
+echo.
+echo Adjust User Accounts
+echo.
+echo ---------------------------
+echo Here is a list of the Current User Accounts on your computer
+net user
+
+echo What would you like to do?
+
+echo 1. Create a New User Accounts
+echo 2. Enable - Disable a User Account
+echo 3. Enable - Disable the Built-in Administrator Account
+echo 4. Change the Password of any Existing User Account
+
+CHOICE /C 1234 /M "Enter your choice: "
+
+IF ERRORLEVEL 4 GoTo NUA
+IF ERRORLEVEL 3 GoTo DAUA
+IF ERRORLEVEL 2 GoTo BIAA
+IF ERRORLEVEL 1 GoTo EUA
+
+:NUA
+echo Here is a list of the current user accounts on your computer. To add a new user account, press Enter.
+net user
+PAUSE >NUL
+echo Please Enter the Username of the Account you wish to Create:
+set /p UOTA=
+echo Press any key to continue
+PAUSE >NUL
+echo Now, enter the Password of the Account you would like to Create:
+set /p POA=
+echo Press any key to continue.
+PAUSE >NUL
+net user %UOTA% %POA% /add
+echo Creating User Account
+echo User Account Completed
+echo Press any Key to Return to the Main Menu
+PAUSE >NUL
+goto AUA
+
+:DAUA
+
+:BIAA
+
+:EUA
+
+:LOCK
+echo Press any key to exit.
+PAUSE >NUL
+Exit
