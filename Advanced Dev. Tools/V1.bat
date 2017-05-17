@@ -88,7 +88,6 @@ PAUSE >NUL
 goto ORIGIN
 
 :Operation1
-@echo off
 :: BatchGotAdmin
 ::-------------------------------------
 REM  --> Check for permissions
@@ -112,9 +111,6 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-::--------------------------------------
-
-::ENTER YOUR CODE BELOW:
 @echo all
 CLS
 echo ------------------------------------------
@@ -188,9 +184,7 @@ net user
 echo.
 echo Enter the Username of the Account you would like to enable/disable.
 set /p UOA=
-echo Press any key to continue
-PAUSE >NUL=
-echo To disable this account, type y. To enable this account, type n.
+echo To disable this account, type n. To enable this account, type y.
 set /p "cho=>"
 if %cho%==Y goto BTEP
 if %cho%==y goto BTEP
@@ -212,6 +206,7 @@ net user %UOA% /active:no
 echo Press any key to return to the Main Menu
 PAUSE >NUL
 goto Origin
+
 :BIAA
 
 :EUA
