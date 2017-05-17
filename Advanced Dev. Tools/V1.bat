@@ -214,7 +214,6 @@ echo This command will change the password of any existing user account. Press a
 PAUSE >NUL
 echo Please enter the username of the account:
 set /p AA=
-echo Press any key
 echo.
 echo Please enter the new password for the account
 set /p AP
