@@ -29,15 +29,17 @@ CLS
 :ORIGIN
 @echo OFF
 Cls
+echo Not all features of this program are fully configured yet so that is why some menu items are missing.
+echo These features will be coming soon.
 ECHO 1. Adjust User Accounts and Admin Settings
-ECHO 2. COMING SOON
-ECHO 3. COMING SOON
-ECHO 4. COMING SOON
-ECHO 5. COMING SOON
+ECHO 2. 
+ECHO 3. 
+ECHO 4. 
+ECHO 5.
 ECHO 6. Exit
 ECHO.
 
-CHOICE /C 123456 /M "Enter your choice: "
+CHOICE /C 1 /M "Enter your choice: "
 
 IF ERRORLEVEL 6 GOTO Operation6
 IF ERRORLEVEL 5 GOTO Operation5
