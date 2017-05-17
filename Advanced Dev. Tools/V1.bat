@@ -1,4 +1,4 @@
-::REM
+REM
 ::There are 3 features that are already thought of. These include:
 ::Save Text to a Text File
 ::Adjust User Accounts and Admin Settings
@@ -6,6 +6,23 @@
 ::Code for these 3 things is already created, and the code for #2 can be manually created
 ::Make Sure to have a Menu inside the Menu, to make it more professional and include more features without cluttering
 ::the interface.
+::COLOR CODE=
+::0 = Black
+::8 = Gray
+::1 = Blue
+::9 = Light Blue
+::2 = Green
+::A = Light Green
+::3 = Aqua
+::B = Light Aqua
+::4 = Red
+::C = Light Red
+::5 = Purple
+::D = Light Purple
+::6 = Yellow
+::E = Light Yellow
+::7 = White
+::F = Bright White
 
 @ECHO OFF
 CLS
@@ -80,7 +97,7 @@ echo 2. Edit Administrator Settings
 echo 3. Return to Main Meni
 echo 4. Exit
 
-CHOICE /C 12 /M "Enter your choice: "
+CHOICE /C 1234 /M "Enter your choice: "
 
 IF ERRORLEVEL 4 Goto LOCK
 IF ERRORLEVEL 4 GOTO ORIGIN
@@ -91,20 +108,20 @@ IF ERRORLEVEL 1 Goto AUA
 @echo all
 Cls
 echo ---------------------------
-echo.
 echo Adjust User Accounts
-echo.
 echo ---------------------------
+echo.
 echo Here is a list of the Current User Accounts on your computer
+echo.
 net user
-
+echo.
 echo What would you like to do?
-
+echo.
 echo 1. Create a New User Accounts
 echo 2. Enable - Disable a User Account
 echo 3. Enable - Disable the Built-in Administrator Account
 echo 4. Change the Password of any Existing User Account
-
+echo.
 CHOICE /C 1234 /M "Enter your choice: "
 
 IF ERRORLEVEL 4 GoTo NUA
