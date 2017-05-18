@@ -1,4 +1,5 @@
 REM
+::Keep Working on Email Settings
 ::There are 3 features that are already thought of. These include:
 ::Save Text to a Text File
 ::Adjust User Accounts and Admin Settings
@@ -31,15 +32,15 @@ CLS
 Cls
 echo Not all features of this program are fully configured yet so that is why some menu items are missing.
 echo These features will be coming soon.
-ECHO 1. Adjust User Accounts and Admin Settings
-ECHO 2. 
+ECHO 1. Connect to Live Support Site
+ECHO 2. Send an Email Requesting a Session Code (Not Working)
 ECHO 3. 
 ECHO 4. 
-ECHO 5.
+ECHO 5. Adjust User Accounts and Admin Settings
 ECHO 6. Exit
 ECHO.
 
-CHOICE /C 1 /M "Enter your choice: "
+CHOICE /C 123456 /M "Enter your choice: "
 
 IF ERRORLEVEL 6 GOTO Operation6
 IF ERRORLEVEL 5 GOTO Operation5
@@ -59,11 +60,16 @@ if %cho%==y goto LOCK
 if %cho%==n goto ORIGIN
 if %cho%==N goto ORIGIN
 
-:Operation5
+:Operation1
 @echo all
 CLS
-echo This feature is coming soon. Press any key to go back to the main menu.
+echo This will take you to our Live Support Site. Please connect using the session code that was provided to you
+echo by the support tech or you can connect via one of the public sessions.
+echo PLEASE NOTE! The Public Sessions may have a longer wait time for the technician to connect as there are many
+echo extra people on the public sessions.
+echo Press any key to continue
 PAUSE >NUL
+start "" https://itechs.screenconnect.com/
 goto ORIGIN
 
 :Operation4
@@ -83,11 +89,18 @@ goto ORIGIN
 :Operation2
 @echo all
 CLS
-echo This feature is coming soon. Press any key to go back to the main menu.
+echo Please enter your Name
+set /p name=
+echo Now, please enter your email address
+set /p ea=
+echo Now, please enter the email message
+set /p em=
+echo Sending Message
+
 PAUSE >NUL
 goto ORIGIN
 
-:Operation1
+:Operation5
 :: BatchGotAdmin
 ::-------------------------------------
 REM  --> Check for permissions
